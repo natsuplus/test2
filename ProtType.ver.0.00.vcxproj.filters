@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="アプリケーション">
+      <UniqueIdentifier>{cd62b976-9fa6-4f42-8084-f49dee07e5b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン">
+      <UniqueIdentifier>{9c4a2aac-837f-499f-b11e-f071ad11e4a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\エントリポイント">
+      <UniqueIdentifier>{9bae0159-9b0a-40fb-91a8-85f0e5d5495e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\入力">
+      <UniqueIdentifier>{ee0ef4d6-cb86-4427-a104-6d0022ed8ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\テキスト表示">
+      <UniqueIdentifier>{e82dfa5c-06fe-43fb-b59e-ab590b58a344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\シーン">
+      <UniqueIdentifier>{c276913b-55b7-43cd-849e-7858a0878da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\ゲーム管理">
+      <UniqueIdentifier>{d3ebaf14-6ee5-4d7b-b428-ae2e4d4060c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\オブジェクト">
+      <UniqueIdentifier>{6479e1ab-a24d-40d6-bec2-8fb52698b37d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\タイマークラス">
+      <UniqueIdentifier>{34b636cc-9890-48c4-beb8-d3fc1c4ce0f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\イメージオブジェクト">
+      <UniqueIdentifier>{8ae01afb-d9e7-4e0a-afbb-e13431df4c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\テクスチャローダー">
+      <UniqueIdentifier>{2abc2572-32ad-4b0e-992d-d305feb26a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\オーディオ">
+      <UniqueIdentifier>{2362c841-e564-41bd-b3d6-be5eb1316195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\入力ダイアログ">
+      <UniqueIdentifier>{bc6b6854-27da-45fe-9822-e4c024710e8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ドメイン\メッセージダイアログ">
+      <UniqueIdentifier>{07793791-7ab6-41de-87c8-c890aeb80160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\ステージ管理">
+      <UniqueIdentifier>{72ddab81-4ee4-442b-85cb-68de9da41b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\オブジェクト\リスト化">
+      <UniqueIdentifier>{6bb8f1f7-4974-4dd6-b114-309af4adf932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="アプリケーション\オブジェクト\更新処理">
+      <UniqueIdentifier>{4c727316-4c2a-4e44-9105-2f3a7acd8012}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ドメイン\エントリポイント</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>ドメイン\入力</Filter>
+    </ClCompile>
+    <ClCompile Include="textDX.cpp">
+      <Filter>ドメイン\テキスト表示</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Result.cpp">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>ドメイン\タイマークラス</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>ドメイン\イメージオブジェクト</Filter>
+    </ClCompile>
+    <ClCompile Include="textureLoader.cpp">
+      <Filter>ドメイン\テクスチャローダー</Filter>
+    </ClCompile>
+    <ClCompile Include="audio.cpp">
+      <Filter>ドメイン\オーディオ</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDialog.cpp">
+      <Filter>ドメイン\入力ダイアログ</Filter>
+    </ClCompile>
+    <ClCompile Include="messageDialog.cpp">
+      <Filter>ドメイン\メッセージダイアログ</Filter>
+    </ClCompile>
+    <ClCompile Include="object.cpp">
+      <Filter>アプリケーション\オブジェクト</Filter>
+    </ClCompile>
+    <ClCompile Include="read_text.cpp">
+      <Filter>アプリケーション\ステージ管理</Filter>
+    </ClCompile>
+    <ClCompile Include="circDblLinkedList.cpp">
+      <Filter>アプリケーション\オブジェクト\リスト化</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>アプリケーション\オブジェクト\リスト化</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>アプリケーション\ゲーム管理</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.cpp">
+      <Filter>アプリケーション\オブジェクト\更新処理</Filter>
+    </ClCompile>
+    <ClCompile Include="updateObjProt.cpp">
+      <Filter>アプリケーション\オブジェクト</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>ドメイン\エントリポイント</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>ドメイン\入力</Filter>
+    </ClInclude>
+    <ClInclude Include="textDX.h">
+      <Filter>ドメイン\テキスト表示</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>アプリケーション\シーン</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>アプリケーション\ゲーム管理</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>ドメイン\タイマークラス</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>ドメイン\イメージオブジェクト</Filter>
+    </ClInclude>
+    <ClInclude Include="textureLoader.h">
+      <Filter>ドメイン\テクスチャローダー</Filter>
+    </ClInclude>
+    <ClInclude Include="audio.h">
+      <Filter>ドメイン\オーディオ</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDialog.h">
+      <Filter>ドメイン\入力ダイアログ</Filter>
+    </ClInclude>
+    <ClInclude Include="messageDialog.h">
+      <Filter>ドメイン\メッセージダイアログ</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>アプリケーション\オブジェクト</Filter>
+    </ClInclude>
+    <ClInclude Include="read_text.h">
+      <Filter>アプリケーション\ステージ管理</Filter>
+    </ClInclude>
+    <ClInclude Include="circDblLinkedList.h">
+      <Filter>アプリケーション\オブジェクト\リスト化</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>アプリケーション\オブジェクト\リスト化</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>アプリケーション\オブジェクト\更新処理</Filter>
+    </ClInclude>
+    <ClInclude Include="updateObjProt.h">
+      <Filter>アプリケーション\オブジェクト</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
