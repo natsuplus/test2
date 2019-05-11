@@ -145,7 +145,6 @@
     <ClCompile Include="textureLoader.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Title.cpp" />
-    <ClCompile Include="updateObjProt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio.h" />
@@ -166,7 +165,6 @@
     <ClInclude Include="textureLoader.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Title.h" />
-    <ClInclude Include="updateObjProt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

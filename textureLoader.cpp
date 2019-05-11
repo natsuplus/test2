@@ -19,7 +19,7 @@ TextureLoader::TextureLoader()
 	textureName[textureLoaderNS::COMET] = { "TEXTURE/comet.jpg" };
 	textureName[textureLoaderNS::PLANET] = { "TEXTURE/planet.jpg" };
 
-	textureName[textureLoaderNS::BACK_GROUND] = { "TEXTURE/backGround.png" };
+	textureName[textureLoaderNS::BACK_GROUND] = { "TEXTURE/gameBG.png" };
 }
 
 

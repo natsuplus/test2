@@ -1,7 +1,6 @@
 //西川
 #include "object.h"
 
-#include "updateObjProt.h"
 //#include "stdlib.h"//malloc用
 #include"textureLoader.h"
 #include "read_text.h"
@@ -52,6 +51,12 @@ Image cleanTex(void);
 void setObjFromFile(ObjStr* p_obj, int i, Stage* p_fromstage);
 void setObjNotFrom(ObjStr* p_obj, int i, int objnum);
 void setObjTex(ObjStr* p_obj, int i);
+
+void updatePlayer(ObjStr* p_obj);
+void setBlackHole(ObjStr* p_obj);
+void updateBlackHole(ObjStr* p_obj);
+void setWhiteHole(ObjStr* p_obj);
+void updateWhiteHole(ObjStr* p_obj);
 
 /*コリジョンリストに必要そうなもの
 obID/obType/pos/rot/scl/coltype
@@ -209,6 +214,7 @@ void initializeObject(StageObj *p_stgobj,int stage){
 			break;
 		case CHARA_BLACKHOLE:
 			//ブラックホール
+			p_stgobj->m_Obj[i].m_use = true;
 			BHid = p_stgobj->m_Obj[i].m_id;
 			break;
 		case CHARA_WHITEHOLE:
@@ -265,8 +271,61 @@ void uninitializeObject(StageObj* p_stgobj) {
 }
 
 void updateObject(StageObj* p_stgobj) {
-	//仮なのでプロトタイプの方に処理飛ばす
-	updateObjProt(p_stgobj);
+	objTypes k;//あまり意味はない
+	for (int i = 0; i < p_stgobj->m_OBJNUM; i++) {
+		if (p_stgobj->m_Obj[i].m_use == false) continue;
+		k = (objTypes)(i);
+		switch (p_stgobj->m_Obj[i].m_type) {//タイプごとに処理分け
+		case CHARA_PLAYER:
+			//星
+			updatePlayer(p_stgobj->m_Obj[i].m_ptr);
+			break;
+		case CHARA_BLACKHOLE:
+			//ブラックホール
+			if (getMouseLButtonTrigger()) // 右クリックでセット
+				setBlackHole(p_stgobj->m_Obj[i].m_ptr);
+
+			updateBlackHole(p_stgobj->m_Obj[i].m_ptr);
+			break;
+		case CHARA_WHITEHOLE:
+			//ホワイトホール
+			if (getMouseRButtonTrigger()) // 右クリックでセット
+				setBlackHole(p_stgobj->m_Obj[i].m_ptr);
+
+			updateBlackHole(p_stgobj->m_Obj[i].m_ptr);
+			break;
+		case CHARA_COMET:
+			//隕石
+			break;
+		case CHARA_KEY:
+			//鍵
+			break;
+		case CHARA_COIN:
+			//収集アイテム
+			break;
+		case STAGE_HURDLE:
+			//動かせる障害物
+			break;
+		case STAGE_WALL:
+			//動かせない壁　地面とか
+			break;
+		case STAGE_LOCK:
+			//鍵で開けられる扉
+			break;
+		case EVENT_GOAL:
+			//ゴール
+			break;
+		case UI_CURSOR:
+			//ブラックホール置くカーソル
+			break;
+		case UI_EFFECT:
+			//エフェクト
+			break;
+		case UI_HP:
+			//残機表示
+			break;
+		}
+	}
 }
 
 void drawObject(StageObj* p_stgobj){
@@ -393,3 +452,22 @@ void setObjTex(ObjStr* obj, int i) {//ObjにStubTexの中身をセット
 		obj->m_image = cleanTex();
 	}
 }
+
+void updatePlayer(ObjStr* p_obj) {
+
+};
+void updateBlackHole(ObjStr* p_obj) {
+
+};
+void updateWhiteHole(ObjStr* p_obj) {
+
+};
+
+void  setBlackHole(ObjStr* p_obj) {
+	p_obj->m_use = true;
+	p_obj->m_pos = D3DXVECTOR2{ (float)getMouseX(),(float)getMouseY() };
+};
+
+void  setWhiteHole(ObjStr* p_obj) {
+	p_obj->m_pos = D3DXVECTOR2{ (float)getMouseX(),(float)getMouseY() };
+};
